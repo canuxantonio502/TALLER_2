@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Movie Explorer</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
+    <header class="header">
+
+        <h1 class="logo">
+            <i class="fa-solid fa-film"></i>
+            Campus Movie Explorer
+        </h1>
+
+        <form class="search-form">
+            <input type="text" placeholder="Buscar película..." class="search-input">
+            <button class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+        </form>
+
+    </header>
+    <main class="main-content">
+
+        <section class="loading hidden">
+            <p>Cargando películas...</p>
+        </section>
+
+        <section class="error-message hidden">
+            <p>Ocurrió un error al obtener los datos.</p>
+        </section>
+
+        <section class="movies-container">
+
+            <!-- Aquí se insertarán las películas dinámicamente -->
+
+        </section>
+
+    </main>
+    <!-- Modal -->
+    <section class="movie-modal hidden">
+
+        <div class="modal-content">
+
+            <button class="close-modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-body">
+
+                <!-- Información dinámica -->
+
+            </div>
+
+        </div>
+
+    </section>
     
+    <footer class="footer">
+        <p>Proyecto realizado con la API de TMDB</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="./js/app.js"></script>
 </body>
+
 </html>
