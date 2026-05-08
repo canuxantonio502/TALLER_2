@@ -28,13 +28,17 @@ body {
 }
 
 #logoImg {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;}
+    height: 70px;
+    border-radius: 30%;}
 
 .logo {
     font-size: 2rem;
     color: var(--accent-color);
+}
+
+#logoImg:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
 }
 
 .search-form {
@@ -60,6 +64,16 @@ body {
     transition: 0.3s;
 }
 
+.search-btn:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+
 .search-btn:hover {
     opacity: 0.8;
 }
@@ -74,9 +88,61 @@ body {
     gap: 25px;
 }
 
-.movie-image {
+.movie-image{
     width: 20%;
-    height: 300px;
+    height: 330px;
     object-fit: cover;
-    border-radius: 8px;
+}
+
+.movie-card{
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.movie-card:hover{
+    transform: scale(1.03);
+}
+
+.movie-info{
+    padding: 15px;
+}
+
+.movie-title{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.movie-date{
+    color: var(--gray-color);
+}
+
+.footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--secondary-color);
+}
+
+.hidden{
+    display: none;
+}
+
+@media(max-width: 768px){
+    .header{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .search-input{
+        width: 100%;
+    }
+    .search-form{
+        width: 100%;
+    }
+}
+
+#last{
+    color: var(--gray-color)
 }
