@@ -36,11 +36,6 @@ body {
     color: var(--accent-color);
 }
 
-#logoImg:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
 .search-form {
     display: flex;
     gap: 10px;
@@ -89,7 +84,7 @@ body {
 }
 
 .movie-image{
-    width: 20%;
+    width: 100%;
     height: 330px;
     object-fit: cover;
 }
@@ -145,4 +140,45 @@ body {
 
 #last{
     color: var(--gray-color)
+}
+
+.menu-btn {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.menu-btn:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #111827;
+    padding: 30px 20px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar.active{
+    left: 0;
+}
+
+.category-list{
+    list-style: none;
+}
+
+.category-list li{
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.category-list li:hover{
+    background-color: #1f2937;
 }

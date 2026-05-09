@@ -10,36 +10,41 @@
 
 <body>
     <header class="header">
-
-        <img id="logoImg" src="./css/assets/logoIMG.png" alt="Logo Campuslands Movie Explorer">
-
+        <div class="menu-container">
+            <button class="menu-btn">
+                <img id="logoImg" src="./css/assets/logoIMG.png" alt="Logo Campuslands Movie Explorer">
+            </button>
+        </div>
         <h1 class="logo">
             <i class="fa-solid fa-film"></i>
             Campus Movie Explorer
         </h1>
-
         <form class="search-form">
             <input type="text" placeholder="Buscar película..." class="search-input">
             <button class="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <img src="./css/assets/search_icon.png" alt="ícono de búsqueda" class="search-icon">
             </button>
-
         </form>
-
     </header>
-    <main class="main-content">
 
+    <aside class="sidebar hidden">
+        <ul class="category-list">
+            <li data-category="popular">Popular</li>
+            <li data-category="top_rated">Top Rated</li>
+            <li data-category="upcoming">Upcoming</li>
+            <li data-category="now_playing">Now Playing</li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
         <section class="loading hidden">
             <p>Cargando películas...</p>
         </section>
-
         <section class="error-message hidden">
             <p>Ocurrió un error al obtener los datos.</p>
         </section>
-
         <section class="movies-container">
-
             <article class="movie-card">
                 <img src="./css/assets/AvatarPoster.webp" alt="Avatar Poster" class="movie-image">
                 <div class="movie-info">
@@ -48,27 +53,18 @@
                 </div>
             </article>
             <!-- Aquí se insertarán las películas dinámicamente -->
-
         </section>
-
     </main>
     <!-- Modal -->
     <section class="movie-modal hidden">
-
         <div class="modal-content">
-
             <button class="close-modal">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-
             <div class="modal-body">
-
                 <!-- Información dinámica -->
-
             </div>
-
         </div>
-
     </section>
 
     <footer class="footer">
