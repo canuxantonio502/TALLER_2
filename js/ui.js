@@ -1,5 +1,6 @@
 const moviesContainer = document.querySelector(".movies-container");
 
+// Creamos la función que renderizará las películas que se le entreguen en string
 export function renderMovies(movies) {
     moviesContainer.innerHTML = ""
     movies.forEach(movie => {
@@ -23,6 +24,7 @@ export function renderMovies(movies) {
 const modal = document.querySelector(".movie-modal");
 const modalBody = document.querySelector(".modal-body");
 
+// Creamos la función que renderizará los detalles de la película seleccionada por el usuario
 export function renderMovieDetails(movie) {
     if (!movie) return;
 
@@ -42,4 +44,17 @@ export function renderMovieDetails(movie) {
         </div>
     `
     modal.classList.remove("hidden");
+}
+
+
+// Creamos las funciones referentes a los errores de carga de la API
+const errorMessage = document.querySelector(".error-message");
+
+export function showError(message){
+    errorMessage.innerHTML = `<p>${message}</p>`
+    errorMessage.classList.remove("hidden")
+}
+
+export function hideError(){
+    errorMessage.classList.add("hidden")
 }

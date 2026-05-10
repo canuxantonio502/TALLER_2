@@ -31,7 +31,7 @@ body {
     height: 70px;
     border-radius: 30%;}
 
-.logo {
+.name {
     font-size: 2rem;
     color: var(--accent-color);
 }
@@ -82,6 +82,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
+    text-align: center;
 }
 
 .movie-image{
@@ -269,4 +270,14 @@ body {
     100%{
         transform: rotate(360deg);
     }
+}
+
+.error-message{
+    background-color: rgba(239, 68, 68, 0.2);
+    border: 1px solid #ef4444;
+    color: #fecaca;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }

@@ -1,6 +1,9 @@
+// Importamos las funciones desde las diferentes hojas de JavaScript
 import { getMovies, getMovieDetails, searchMovies } from "./api.js";
 import { renderMovies, renderMovieDetails } from "./ui.js";
+import { showError, hideError } from "./ui.js";
 
+// Declaramos nuestros elementos apartir de los obtenidos del HTML
 const menuBtn = document.querySelector(".menu-btn")
 const sidebar = document.querySelector(".sidebar")
 const loading = document.querySelector(".loading")
@@ -14,28 +17,36 @@ function hideLoading() {
 }
 
 menuBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
+  sidebar.classList.toggle("active")
 });
 
-async function init() {
-  showLoading()
-  await new Promise(resolve => setTimeout(resolve, 1000))
-  const movies = await getMovies("popular");
-  if (Array.isArray(movies)){
-    renderMovies(movies)
-  }
-  hideLoading()
+// Damos inicio a la aplicación mostrando las películas populares
+async function init(){
+    try{
+        hideError()
+        showLoading()
+        await new Promise(resolve => setTimeout(resolve, 1000))
+        const movies = await getMovies("popular")
+        if(Array.isArray(movies)){
+            renderMovies(movies)
+        }
+    }catch(error){
+        showError(error.message)
+    }finally{
+        hideLoading()
+    }
 }
 
-init();
+init()
 
+// Capturamos las categorías del menú, para poder acceder a ellas con el getMovie
 const categories = document.querySelectorAll(".category-list li")
 
-categories.forEach((categoryEl) => {
-  categoryEl.addEventListener("click", async () => {
+categories.forEach((categoria) => {
+  categoria.addEventListener("click", async () => {
     showLoading()
     await new Promise(resolve => setTimeout(resolve, 1000))
-    const selectedCategory = categoryEl.dataset.category
+    const selectedCategory = categoria.dataset.category
     const movies = await getMovies(selectedCategory)
     if (Array.isArray(movies)) {
       renderMovies(movies)
@@ -45,6 +56,7 @@ categories.forEach((categoryEl) => {
   })
 })
 
+// Creamos el evento para mostrar el modal de la película seleccionada
 document.addEventListener("click", async (event) => {
   const movieCard = event.target.closest(".movie-card");
   if (!movieCard) return;
@@ -68,6 +80,7 @@ modal.addEventListener("click", (event) => {
   }
 });
 
+// Creamos el evento para tomar la petición del usuario y renderizar los resultados
 const searchForm = document.querySelector(".search-form");
 const searchInput = document.querySelector(".search-input");
 
