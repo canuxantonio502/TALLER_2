@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: var(--secondary-color);
+    background-color: var(--secundary-color);
 }
 
 #logoImg {
@@ -90,7 +90,7 @@ body {
 }
 
 .movie-card{
-    background-color: var(--secondary-color);
+    background-color: var(--secundary-color);
     border-radius: 12px;
     overflow: hidden;
     transition: 0.3s;
@@ -118,11 +118,11 @@ body {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    background-color: var(--secondary-color);
+    background-color: var(--secundary-color);
 }
 
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 @media(max-width: 768px){
@@ -143,7 +143,7 @@ body {
 }
 
 .menu-btn {
-    background-color: var(--primary-color);
+    background-color: var(--secundary-color);
     border: none;
 }
 
@@ -183,3 +183,59 @@ body {
 .category-list li:hover{
     background-color: #1f2937;
 }
+
+.movie-modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 2000;
+}
+
+.modal-content{
+    background-color: #111827;
+    width: 900px;
+    max-width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.close-modal{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.modal-body{
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+@media(max-width: 768px){
+    .modal-body{
+        flex-direction: column;
+    }
+}
+
+.modal-image{
+    width: 300px;
+    border-radius: 12px;
+}
+
+.modal-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
