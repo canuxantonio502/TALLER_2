@@ -31,12 +31,14 @@ export function renderMovieDetails(movie) {
         : "https://placehold.co/500x750?text=Sin+Póster";
 
     modalBody.innerHTML = `
-        <img src="${poster}" alt="${movie.title || ""}" class="modal-image">
+        <img src="${poster}" alt="${movie.title || ''}" class="modal-image">
         <div class="modal-info">
             <h2>${movie.title || "Sin título"}</h2>
-            <p>${movie.overview || ""}</p>
-            <p>⭐ Rating: ${movie.vote_average ?? ""}</p>
-            <p>📅 Release: ${movie.release_date ?? ""}</p>
+            <p>${movie.overview || "Sin descripción disponible."}</p>
+            <p>⭐ <strong>Rating:</strong> ${movie.vote_average ? movie.vote_average.toFixed(1) + " / 10" : "N/A"}</p>
+            <p>📅 <strong>Estreno:</strong> ${movie.release_date || "N/A"}</p>
+            <p>🕒 <strong>Duración:</strong> ${movie.runtime ? movie.runtime + " min" : "N/A"}</p>
+            <p>🎭 <strong>Géneros:</strong> ${movie.genres?.map(g => g.name).join(", ") || "N/A"}</p>
         </div>
     `
     modal.classList.remove("hidden");

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Movie Explorer</title>
+    <link rel="icon" href="./css/assets/logoIMG.png" type="image/png">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -12,8 +13,7 @@
     <header class="header">
         <div class="menu-container">
             <button class="menu-btn">
-                <i class="fa-solid fa-bars"><img id="logoImg" src="./css/assets/logoIMG.png"
-                        alt="Logo Campuslands Movie Explorer"></i>
+                <img id="logoImg" src="./css/assets/logoIMG.png" alt="Logo Campuslands Movie Explorer"></i>
             </button>
         </div>
         <h1 class="logo">
@@ -23,8 +23,7 @@
         <form class="search-form">
             <input type="text" placeholder="Buscar película..." class="search-input">
             <button class="search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <img src="./css/assets/search_icon.png" alt="ícono de búsqueda" class="search-icon">
+                <img src="./css/assets/search_icon.png" alt="ícono de búsqueda" class="icon">
             </button>
         </form>
     </header>
@@ -40,6 +39,7 @@
 
     <main class="main-content">
         <section class="loading hidden">
+            <div class="spinner"></div>
             <p>Cargando películas...</p>
         </section>
         <section class="error-message hidden">
@@ -53,7 +53,7 @@
     <section class="movie-modal hidden">
         <div class="modal-content">
             <button class="close-modal">
-                <i class="fa-solid fa-xmark"></i>
+                <img src="./css/assets/close_icon.png" alt="close boton" class="icon">
             </button>
             <div class="modal-body">
             </div>
