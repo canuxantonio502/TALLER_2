@@ -34,19 +34,19 @@ La aplicación permite explorar películas populares, buscar películas por nomb
 
 ### Página principal
 
-![Home](./assets/home.png)
+![Home](./css/assets/home.png)
 
 ---
 
 ### Modal de detalles
 
-![Modal](./assets/modal.png)
+![Modal](./css/assets/modal.png)
 
 ---
 
 ### Sidebar de categorías
 
-![Sidebar](./assets/sidebar.png)
+![Sidebar](./css/assets/sidebar.png)
 
 ---
 
