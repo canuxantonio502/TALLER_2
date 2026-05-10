@@ -79,18 +79,16 @@ Abrir index.html con Live Server o cualquier servidor local.
 
 📁 Estructura del proyecto
 
-📦 TALLER_2  
- ┣ 📂 md  
- ┃ ┣ 📂 assets  
- ┃ ┗ 📖 README.md  
+📦 TALLER_2    
  ┣ 📂 css  
  ┃ ┗ 📜 styles.css  
  ┃ ┣ 📂 assets  
  ┣ 📂 js  
  ┃ ┣ 📜 api.js  
  ┃ ┣ 📜 app.js  
- ┃ ┣ 📜 ui.js  
+ ┃ ┗ 📜 ui.js  
  ┣ 📜 index.html  
+ ┗ 📖 README.md  
  ┗ 🚫 .gitignore  
 
 ---
