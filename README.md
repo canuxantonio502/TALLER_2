@@ -55,12 +55,12 @@ La aplicación permite explorar películas populares, buscar películas por nomb
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://https://github.com/canuxantonio502/TALLER_2.git
+git clone https://github.com/canuxantonio502/campus_movie_explorer
 ```
 ### 2. Abrir la carpeta del proyecto
 
 ```bash
-cd TALLER_2
+cd campus_movie_explorer
 ```
 ### 3. Crear el archivo config.js
 
